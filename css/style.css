@@ -1,0 +1,974 @@
+/* -------------------------------  1. Global Styles & Variables --------------------------------*/
+body {
+  font-family: sans-serif;
+  background-color: #fbfcfd;
+  margin: 0;
+  padding: 0;
+}
+
+.clear-fix {
+  clear: both;
+}
+/* ----------------------------------------  2. Navbar Section   ----------------------------------- */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 5%;
+
+  background-color: #f5f3ff;
+  overflow: hidden;
+  margin-bottom: 30px;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  float: left;
+  transform: translateX(220px);
+}
+
+.navbar .logo i {
+  font-size: 15px;
+  color: #fff;
+  background-color: #8a2be2;
+  padding: 12px;
+  border-radius: 8px;
+  margin-right: 12px;
+  float: left;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #333;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+  transform: translateX(-220px);
+}
+
+.nav-links li {
+  float: left;
+  margin-left: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 5px;
+  transition: color 0.3s, border-color 0.3s;
+  line-height: 45px;
+}
+
+.nav-links li a:hover {
+  color: #8a2be2;
+}
+
+.nav-links li a.active {
+  color: #8a2be2;
+  border-bottom: 2px solid #8a2be2;
+}
+
+/* ----------------------------------------  3. hero Section   ----------------------------------- */
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  transform: translateY(100px);
+}
+.container {
+  width: 80%;
+  height: auto;
+  margin: 20px auto;
+  padding: 10px 10px;
+}
+
+.product-card {
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  border-radius: 16px;
+  padding: 30px;
+  margin: 20px auto;
+}
+
+.product-image {
+  width: 42%;
+  font-size: 16px;
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid #c9c6c6;
+  padding: 20px;
+  float: left;
+  margin-right: 4%;
+}
+
+.product-details {
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+
+.image {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background-color: #8a2be2;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tags {
+  margin-bottom: 16px;
+}
+
+.tag {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  color: white;
+  background-color: #a684ff;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 20px 0 30px 0;
+  color: #1a1a1a;
+}
+
+.description {
+  font-size: 20px;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+}
+
+.price-section {
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.current-price,
+.original-price,
+.save-badge {
+  vertical-align: middle;
+}
+
+.current-price {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-right: 10px;
+}
+
+.original-price {
+  font-size: 20px;
+  font-weight: 400;
+  color: #999;
+  margin-right: 10px;
+  text-decoration: line-through;
+}
+
+.save-badge {
+  background-color: #ffebee;
+  color: #e53935;
+  padding: 8px 8px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.buttons {
+  margin-top: auto;
+}
+
+button {
+  width: 100%;
+  padding: 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: scale 0.3s;
+  align-items: center;
+}
+
+.add-to-cart-btn {
+  background-color: #8e51ff;
+  color: white;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.add-to-cart-btn i,
+.add-to-wishlist-btn i {
+  margin-right: 10px;
+}
+
+.add-to-cart-btn:hover {
+  scale: 1.05;
+}
+
+.add-to-wishlist-btn {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.add-to-wishlist-btn:hover {
+  scale: 1.05;
+}
+
+/* ----------------------------------------  4. Compare Section   ----------------------------------- */
+
+.compare-section {
+  background-color: #f7f5ff;
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-block: 40px;
+}
+
+.section-header h2 {
+  font-size: 28px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+.section-header h2 span {
+  color: #8a2be2;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.compare-table {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.compare-table thead th {
+  font-weight: 700;
+  color: #1a1a1a;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: left;
+}
+
+.compare-table thead h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.compare-table thead span {
+  font-size: 13px;
+  color: #6c757d;
+  font-weight: 400;
+}
+
+.compare-table thead a {
+  font-size: 13px;
+  color: #8a2be2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 20px 15px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.compare-table tr th {
+  text-align: left;
+}
+
+.compare-table tbody tr th,
+.compare-table tbody tr td {
+  border-bottom: 1px solid #ddd;
+}
+
+.compare-table th {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.compare-table th i {
+  margin-right: 10px;
+  color: #8a2be2;
+  width: 20px;
+  text-align: center;
+}
+
+.compare-table .text {
+  text-align: center;
+}
+
+.compare-table .highlight {
+  background-color: #f7f5ff;
+}
+
+.compare-table thead .highlight {
+  border-top-left-radius: 10px;
+  color: #8a2be2;
+  border-top-right-radius: 10px;
+}
+
+.rating-row .no-border-bottom {
+  border-bottom: none;
+}
+
+.highlight i {
+  margin-right: 5px;
+}
+
+.tag-table {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tag-table.purple {
+  background-color: #8a2be2;
+}
+
+.tag-table.purple-light {
+  background-color: #a061ff;
+}
+
+.tag-table.grey {
+  background-color: #a9b4c4;
+}
+
+.tag-table.blue {
+  background-color: #4a90e2;
+}
+
+.no {
+  color: #e53935;
+  font-weight: 600;
+}
+
+.price-row td,
+.price-row th {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.rating-row .stars {
+  color: #ffc107;
+  font-size: 18px;
+}
+
+.rating-row span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #6c757d;
+}
+
+.winner-banner {
+  width: 20%;
+  margin: 40px auto 0 auto;
+  background-color: #fff;
+  border: 1px solid #d8ead9;
+  border-radius: 12px;
+  padding: 15px 20px;
+  overflow: hidden;
+}
+
+.winner-icon {
+  float: left;
+  color: #00c950;
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.winner-text strong {
+  display: block;
+  color: #00c950;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.winner-text span {
+  font-size: 14px;
+  color: #00c950;
+}
+
+/* ----------------------------------------  5. Reviews Section   ----------------------------------- */
+
+.reviews-section {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 28px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.review-summary {
+  position: sticky;
+  top: 80px;
+  float: left;
+  width: 30%;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.review-list {
+  float: left;
+  width: 50%;
+  padding-left: 40px;
+}
+
+.overall-rating {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.rating-count {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.rating-breakdown {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rating-breakdown li {
+  margin-bottom: 10px;
+}
+
+.rating-breakdown span {
+  float: left;
+  width: 30px;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.rating-breakdown span i {
+  color: #ffc107;
+  margin-left: 3px;
+}
+
+.progress-bar {
+  float: left;
+  width: calc(100% - 90px);
+  height: 12px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  margin: 5px 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #ffc107;
+  border-radius: 4px;
+}
+
+.progress.p78 {
+  width: 78%;
+}
+
+.progress.p15 {
+  width: 15%;
+}
+
+.progress.p5 {
+  width: 5%;
+}
+
+.progress.p1-5 {
+  width: 1.5%;
+}
+
+.progress.p0-5 {
+  width: 0.5%;
+}
+
+.rating-breakdown li:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.summary-footer {
+  border-top: 1px solid #e0e0e0;
+  margin-top: 25px;
+  padding-top: 25px;
+}
+
+.footer-item {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.footer-item strong {
+  display: block;
+  font-size: 20px;
+  color: #1a1a1a;
+}
+
+.footer-item span {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.review-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.review-header {
+  margin-bottom: 15px;
+}
+
+.avatar {
+  float: left;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #8e51ff;
+}
+
+.verified-badge {
+  display: block;
+  font-size: 12px;
+  color: #6a5acd;
+  background-color: #e6e6fa;
+  padding: 4px 8px;
+  border-radius: 15px;
+}
+
+.reviewer-info {
+  float: left;
+}
+
+.reviewer-info strong {
+  display: block;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.reviewer-info span {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.review-rating {
+  margin-bottom: 15px;
+  color: #ffc107;
+  font-weight: 600;
+}
+
+.review-rating i {
+  font-size: 12px;
+}
+
+.review-meta {
+  float: right;
+  text-align: right;
+}
+
+.review-date {
+  color: #6c757d;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.review-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  margin: 0;
+}
+
+.load-more-container {
+  text-align: center;
+  margin-top: 30px;
+  width: 15%;
+  margin: 0 auto;
+  display: block;
+}
+
+.load-more-btn {
+  background-color: #f7f5ff;
+  color: #8a2be2;
+  border: 1px solid #8a2be2;
+  position: absolute;
+  width: 15%;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.load-more-btn:hover {
+  background-color: #8a2be2;
+  color: white;
+}
+/* ----------------------------------------  6. Related Product Section   ----------------------------------- */
+
+#related-products {
+  padding: 80px 0;
+  background-color: #f7f5ff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 28px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.product-cards-wrapper {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.related-product-card {
+  float: left;
+  width: 15%;
+  margin-inline: 1%;
+  background-color: #fff;
+  border-radius: 16px;
+  border: 1px solid #a2a2af;
+  padding: 20px;
+  text-align: left;
+  overflow: hidden;
+  transform: translateX(140px);
+
+  position: relative;
+}
+
+.related-product-card:hover .image-wrapper {
+  transform: scale(1.03);
+}
+
+.image-wrapper {
+  position: relative;
+  background-color: #a2a2af;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease-out;
+}
+
+.image-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  z-index: 100;
+}
+
+.badge.accessory {
+  background-color: #00bba7;
+}
+
+.badge.essential {
+  background-color: #5cb85c;
+}
+
+.badge.power {
+  background-color: #00b8db;
+}
+
+.badge.safety {
+  background-color: #e53935;
+}
+
+.related-product-card h3 {
+  font-size: 18px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.related-product-card p {
+  font-size: 14px;
+  color: #6c757d;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.card-footer .price {
+  float: left;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 20px;
+}
+
+.add-to-cart {
+  float: right;
+  background-color: #8a2be2;
+  color: #fff;
+  border: none;
+  width: 55%;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #6a0dad;
+}
+
+.view-all-button-container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.view-all-btn {
+  background-color: #f7f5ff;
+  color: #8a2be2;
+  border: 1px solid #8a2be2;
+  padding: 14px 40px;
+  font-size: 16px;
+  width: 15%;
+  font-weight: 600;
+  border-radius: 40px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.view-all-btn:hover {
+  background-color: #8a2be2;
+  color: white;
+}
+
+/* ----------------------------------------  7. Footer Section   ----------------------------------- */
+
+.footer {
+  background-color: #1c1f2e;
+  color: #a9b4c4;
+  padding: 30px 0 30px 0;
+}
+
+.footer-main {
+  overflow: hidden;
+}
+
+.footer-col {
+  float: left;
+  width: 25%;
+}
+
+.footer-col-inner {
+  padding: 0 15px;
+}
+
+.footer-col-inner .logo {
+  margin-bottom: 20px;
+}
+
+.footer-col-inner .logo i {
+  float: left;
+  font-size: 24px;
+  color: #fff;
+  background-color: #8a2be2;
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.footer-col .logo span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 45px;
+}
+
+.footer-description {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-block: 30px;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #2a2d3d;
+  color: #a9b4c4;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a.facebook:hover {
+  background-color: #1877f2;
+  color: #fff;
+}
+
+.social-links a.twitter:hover {
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+.social-links a.instagram:hover {
+  background-color: #e4405f;
+  color: #fff;
+}
+
+.social-links a.youtube:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.footer-col h3 {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul a {
+  text-decoration: none;
+  color: #a9b4c4;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-col ul a:hover {
+  color: #fff;
+}
+
+.footer-divider {
+  border-top: 1px solid #2a2d3d;
+  margin: 10px 0;
+}
+
+.copyright-text {
+  float: left;
+  font-size: 14px;
+  line-height: 40px;
+}
+
+.copyright-text a {
+  color: #a9b4c4;
+  text-decoration: none;
+}
+
+.copyright-text a:hover {
+  color: #fff;
+}
+
+.payment-methods {
+  float: right;
+}
+
+.payment-methods i {
+  font-size: 28px;
+  color: #fff;
+  background-color: #fff;
+  color: #1c1f2e;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-left: 10px;
+  line-height: 30px;
+}
